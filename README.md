@@ -7,12 +7,11 @@ And, you know, Filebeat can show `user_agent.os.name` for OS and `user_agent.nam
 This LUA-script helps you do same things, but with FluentBit!
 
 Supporting OS for parse:
-- Windows Vista
-- Windows 7
-- Windows 8
-- Windows 8.1
-- Windows 10
-- Mac OS X
+- Windows family (starts from XP up to Win10. Olders Windows family OS will be marked as Legacy)
+- Mac OS X family (starts from El Capitan up to Mojave. Olders OS X family OS will be marked as Legacy)
+- iOS (11 and 12)
+- Android (starts from KitKat 4.4 up to 9.0)
+- Linux (can define, is Ubuntu or not, lol)
 - Other (collect all other OS)
 
 Supporting browsers for parse:
