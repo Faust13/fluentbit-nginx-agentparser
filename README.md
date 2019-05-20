@@ -6,7 +6,25 @@ And, you know, Filebeat can show `user_agent.os.name` for OS and `user_agent.nam
 
 This LUA-script helps you do same things, but with FluentBit!
 
-_Yes, i know, this script is not perfect, (basicaly, now it cofigure only to shows Windows XP-10 and OS X, and do not support any of not-very popular browser) but u can fix it :)_
+Supporting OS for parse:
+- Windows Vista
+- Windows 7
+- Windows 8
+- Windows 8.1
+- Windows 10
+- Mac OS X
+- Other (collect all other OS)
+
+Supporting browsers for parse:
+- Yandex Browser
+- Opera
+- Firefox
+- Edge
+- Safari
+- Internet Explorer
+- Chrome (may collect all other, less popular browsers)
+
+_Yes, i know, this script is not perfect, but u can fix it :)_
 
 # How to use
 
