@@ -46,29 +46,29 @@ function defineOS(tag, timestamp, record)
                 return 1, timestamp, new_record
             end
         ------------PARSE OS X FAMILY-------------
-        elseif  string.match(record["agent"], "Mac OS X")=="Mac OS X"          
+        elseif (string.match(record["agent"], "Mac OS X")=="Mac OS X" and string.match(record["agent"], "iPhone")~="iPhone")        
         then new_record = record
             new_record["Client.OS.family"]="Mac OS X"
 
-            if (string.match(record["agent"], "10.11")=="10.11" or string.match(record["agent"], "10_11")=="10_11")
+            if (string.match(record["agent"], "Intel Mac OS X 10.11")=="Intel Mac OS X 10.11" or string.match(record["agent"], "Intel Mac OS X 10_11")=="Intel Mac OS X 10_11")
             then 
-                new_record["Client.OS.full"]="Mac OS X 10. 11 (El Capitan)"
+                new_record["Client.OS.full"]="Mac OS X 10.11 (El Capitan)"
                 new_record["Client.OS.version"]="10.11"    
                 return 1, timestamp, new_record
 
-            elseif  string.match(record["agent"], "10_12")=="10_12"    
+            elseif (string.match(record["agent"], "Intel Mac OS X 10_12")=="Intel Mac OS X 10_12" or string.match(record["agent"], "Intel Mac OS X 10.12")=="Intel Mac OS X 10.12")
             then 
                 new_record["Client.OS.full"]="Mac OS X 10.12 (Sierra)"
                 new_record["Client.OS.version"]="10.12"
                 return 1, timestamp, new_record
 
-            elseif  string.match(record["agent"], "10_13")=="10_13"    
+            elseif  (string.match(record["agent"], "Intel Mac OS X 10_13")=="Intel Mac OS X 10_13" or string.match(record["agent"], "Intel Mac OS X 10.13")=="Intel Mac OS X 10.13")    
             then 
                 new_record["Client.OS.full"]="Mac OS X 10.13 (High Sierra)"
                 new_record["Client.OS.version"]="10.13"
                 return 1, timestamp, new_record
 
-            elseif  string.match(record["agent"], "10_14")=="10_14"    
+            elseif  string.match(record["agent"], "OS X 10_14")=="OS X 10_14" or string.match(record["agent"], "OS X 10.14")=="OS X 10.14"
             then 
                 new_record["Client.OS.full"]="Mac OS X 10.14 (Mojave)"
                 new_record["Client.OS.version"]="10.14"
@@ -164,7 +164,6 @@ function defineOS(tag, timestamp, record)
             return 1, timestamp, new_record
     end    
 end
-
 
 function defineBrowser(tag, timestamp, record)
     if (string.match(record["agent"], "YaBrowser")=="YaBrowser" or string.match(record["agent"],"Yowser")=="Yowser")
