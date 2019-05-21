@@ -15,13 +15,19 @@ Supporting OS for parse:
 - Other (collect all other OS)
 
 Supporting browsers for parse:
+- Mobile Chrome
+- Samsung Browser
+- UC Browser
+- Opera Mobile
+- Opera Mini
 - Yandex Browser
 - Opera
 - Firefox
 - Edge
 - Safari
 - Internet Explorer
-- Chrome (may collect all other, less popular browsers)
+- Chrome 
+- Unknown Browser (collect all other, less popular browsers)
 
 _Yes, i know, this script is not perfect, but u can fix it :)_
 
