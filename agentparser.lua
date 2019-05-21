@@ -105,27 +105,27 @@ function defineOS(tag, timestamp, record)
                     new_record["Client.OS.version"]="4.4"
                     return 1, timestamp, new_record
     
-                    elseif (string.match(record["agent"], "Android 8.0")=="Android 8.0" or string.match(record["agent"], "Android 8.1.0")=="Android 8.1.0")
+                    elseif string.match(record["agent"], "Android 8")=="Android 8"
                         then new_record["Client.OS.full"]="Android 8 (Oreo)"
                         new_record["Client.OS.version"]="8.x"
                         return 1, timestamp, new_record
     
-                    elseif (string.match(record["agent"], "Android 9.0")=="Android 9.0" or string.match(record["agent"], "Android 9.0.0")=="Android 9.0.0")
+                    elseif string.match(record["agent"], "Android 9")=="Android 9"
                 then new_record["Client.OS.full"]="Android 9 (Pie)"
                         new_record["Client.OS.version"]="9.x"
                         return 1, timestamp, new_record
                 
-                    elseif (string.match(record["agent"], "Android 6.0")=="Android 6.0" or string.match(record["agent"], "Android 6.0.1")=="Android 6.0.1")
+                    elseif string.match(record["agent"], "Android 6")=="Android 6"
                         then new_record["Client.OS.full"]="Android 6"
                         new_record["Client.OS.version"]="6.0"
                         return 1, timestamp, new_record
     
-                    elseif (string.match(record["agent"], "Android 7.0")=="Android 7.0" or string.match(record["agent"], "Android 7.1")=="Android 7.1")
+                    elseif string.match(record["agent"], "Android 7")=="Android 7"
                         then new_record["Client.OS.full"]="Android 7 (Nougat)"
                         new_record["Client.OS.version"]="7.x"
                         return 1, timestamp, new_record
     
-                    elseif (string.match(record["agent"], "Android 5.0")=="Android 5.0" or string.match(record["agent"], "Android 5.1")=="Android 5.1")
+                    elseif string.match(record["agent"], "Android 5")=="Android 5"
                         then new_record["Client.OS.full"]="Android 5 (Nougat)"
                         new_record["Client.OS.version"]="5.x"
                         return 1, timestamp, new_record
@@ -148,7 +148,7 @@ function defineOS(tag, timestamp, record)
     
                 elseif string.match(record["agent"], "CPU iPhone OS 11")=="CPU iPhone OS 11"
                     then
-            new_record["Client.OS.full"]="iOS 11"
+            	    new_record["Client.OS.full"]="iOS 11"
                     new_record["Client.OS.version"]="11.x"
                     return 1, timestamp, new_record
     
