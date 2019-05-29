@@ -1,7 +1,8 @@
 function defineOS(tag, timestamp, record)
+ if record["agent"]~=nil
+ then
     new_record = record 
     ------------PARSE WINDOWS FAMILY-------------
-      if record["agent"]~=nil
         if string.match(record["agent"], "Windows")=="Windows"     
             then 
                 new_record["Client.OS.family"]="Windows"
@@ -161,14 +162,17 @@ function defineOS(tag, timestamp, record)
     
             else
                 
-                new_record["Client.OS"]="Other"
+                new_record["Client.OS.full"]="Other"
                 return 1, timestamp, new_record
         end    
     end
   end
+
     function defineBrowser(tag, timestamp, record)
+ if record["agent"]~=nil
+ then
+
         new_record = record
-      if record["agent"]~=nil
         ------------------MOBILE SECTION--------------------------------
         if (string.match(record["agent"], "Android")=="Android" or string.match(record["agent"], "iOS")=="iOS") 
         then 
